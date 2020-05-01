@@ -1,4 +1,4 @@
-## Dacar Web App
+## Cats Web App
 
 This project inited with nodejs v 12.13.0 (you can install [NVM utilities](https://github.com/nvm-sh/nvm)).
 
@@ -17,5 +17,3 @@ You will don't use propTypes, becaouse we have TypeScript power.
 
 Please use interface abstraction for components and ts files. We write this project only in Typescript and Material styles (css-in-js)
 
-### Author
-If you have questions, pelase write your Lead, Mentor or [Fedor Rychkov](https://staff.yandex.ru/fr?org_id=2037670&uid=1130000037334516)
