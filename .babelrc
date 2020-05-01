@@ -1,7 +1,7 @@
 {
   "plugins": [
     [
-      "styled-components",
+      "inline-react-svg",
       { "ssr": true, "displayName": true, "preprocess": false }
     ]
   ],
