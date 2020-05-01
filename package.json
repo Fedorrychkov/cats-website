@@ -10,14 +10,23 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "next": "^9.3.5",
+    "next-images": "^1.4.0",
+    "nextjs-fonts": "^0.22.0",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-helmet": "^6.0.0",
+    "react-redux": "^7.2.0",
     "react-scripts": "3.4.1",
+    "redux": "^4.0.5",
+    "redux-saga": "^1.1.3",
     "typescript": "~3.7.2"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -35,5 +44,42 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "lint-staged": {
+    "!(*{tests,use-cases}/**).js": [
+      "prettier --write",
+      "eslint --fix",
+      "git add"
+    ],
+    "tests/**/*.js": [
+      "tests/node_modules/.bin/eslint"
+    ],
+    "use-cases/**/*.js": [
+      "use-cases/node_modules/.bin/eslint"
+    ],
+    "*.ts": [
+      "prettier --parser typescript --write --no-semi",
+      "bash -c tsc",
+      "git add"
+    ]
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-import": "^1.13.0",
+    "babel-plugin-styled-components": "^1.10.7",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jest": "^23.8.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.3",
+    "eslint-plugin-react": "^7.19.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.1.7",
+    "prettier": "^2.0.5"
   }
 }
